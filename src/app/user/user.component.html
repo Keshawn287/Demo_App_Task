@@ -1,0 +1,22 @@
+<!--
+
+This section we will manipulate the dummy-test.ts file
+we will draw a random user from list of users and then output the info of the drawn user. We will do this dynamically.
+
+1. Draw a random user from the User.component.ts file
+2. Output the name in html by binding template to properties in component
+ A. You can output Dynamic content with String Interpolation -> {{ selectedUser.name }} (Best practice is to only use in between tags)
+ B. Property Binding & Outputting Computed Values -> <img [src]="selectedUser.avatar" alt="">
+ C. Use Getters for Computed Values; sometimes it is a better practice to keep dynamic code simple and to outsource it from correct component.ts 
+ 
+3.Some things you may want to do is Listening to Events with Even Binding which (Listening to user inputs like click events)
+4. Managing State and Changing the Data
+
+
+-->
+<div>
+    <button (click)="onSelectedUser()"> <!--Event Listener: Use method in component.ts class-->
+        <img [src]="imagePath" [alt]="selectedUser.name" />
+        <span>{{ selectedUser.name }}</span>
+    </button>
+</div>
